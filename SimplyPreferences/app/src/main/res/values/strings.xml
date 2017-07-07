@@ -14,19 +14,26 @@
     <!-- TODO (35) create label for second preference-->
     <string name="second_preference_label">Second preference</string>
     <!-- TODO (36) create key for second preference-->
-    <string name="second_preference_key">second_preference</string>
+    <string name="second_preference_key" translatable="false">second_preference</string>
     <!-- TODO (37) create value for first entry of the second preference-->
-    <string name="second_preference_first_entry_value">first_entry</string>
+    <string name="second_preference_first_entry_value" translatable="false">first_entry</string>
     <!-- TODO (38) create label for first entry of the second preference-->
     <string name="second_preference_first_entry_label">First entry</string>
     <!-- TODO (37) create value for second entry of the second preference-->
-    <string name="second_preference_second_entry_value">second_entry</string>
+    <string name="second_preference_second_entry_value" translatable="false">second_entry</string>
     <!-- TODO (38) create label for second entry of the second preference-->
     <string name="second_preference_second_entry_label">Second entry</string>
     <!-- TODO (37) create value for third entry of the second preference-->
-    <string name="second_preference_third_entry_value">third_entry</string>
+    <string name="second_preference_third_entry_value" translatable="false">third_entry</string>
     <!-- TODO (38) create label for third entry of the second preference-->
     <string name="second_preference_third_entry_label">Third entry</string>
     <!-- TODO (39) create default value for second preference-->
-    <string name="second_preference_default_value">@string/second_preference_first_entry_value</string>
+    <string name="second_preference_default_value" translatable="false">@string/second_preference_first_entry_value</string>
+
+    <!-- TODO (70) create default value for third preference -->
+    <string name="third_preference_default_value">Third preference default value</string>
+    <!-- TODO (71) create key for third preference -->
+    <string name="third_preference_key" translatable="false">third_preference</string>
+    <!-- TODO (72) create label for third preference -->
+    <string name="third_preference_label">Third preference</string>
 </resources>

@@ -17,4 +17,10 @@
         android:entryValues="@array/second_preference_entry_values"
         android:key="@string/second_preference_key"
         android:title="@string/second_preference_label" />
+    <!-- TODO (73) Create third preference, EditTextPreference -->
+    <EditTextPreference
+        android:defaultValue="@string/third_preference_default_value"
+        android:key="@string/third_preference_key"
+        android:title="@string/third_preference_label" />
+
 </PreferenceScreen>

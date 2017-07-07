@@ -19,5 +19,12 @@
         android:layout_height="wrap_content"
         android:padding="16dp"
         android:text="@string/first_preference_label" />
+    <!-- TODO (74) Create dummy TextView to show that our third shared preference works -->
+    <TextView
+        android:id="@+id/third_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:text="@string/third_preference_label" />
 
 </LinearLayout>

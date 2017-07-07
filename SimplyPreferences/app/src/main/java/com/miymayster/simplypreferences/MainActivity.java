@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity implements SharedPreferences
 
     TextView firstTextView;
     TextView secondTextView;
+    TextView thirdTextView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,6 +26,8 @@ public class MainActivity extends AppCompatActivity implements SharedPreferences
         firstTextView = (TextView) findViewById(R.id.first_tv);
         // TODO (44) Saving reference to our dummy TextView
         secondTextView = (TextView) findViewById(R.id.second_tv);
+        // TODO (75) Saving reference to our dummy TextView
+        thirdTextView = (TextView) findViewById(R.id.third_tv);
 
         setupSharedPreferences();
     }
@@ -35,6 +38,8 @@ public class MainActivity extends AppCompatActivity implements SharedPreferences
         updateFirstTextView(sharedPreferences);
         // TODO (45) update second TextView accordingly
         updateSecondTextView(sharedPreferences);
+        // TODO (76) update third TextView accordingly
+        updateThirdTextView(sharedPreferences);
 
         // TODO (34) register change listener for shared preferences
         sharedPreferences.registerOnSharedPreferenceChangeListener(this);
@@ -56,6 +61,11 @@ public class MainActivity extends AppCompatActivity implements SharedPreferences
         // TODO (46) Save value of second preference into variable
         String secondPreferenceValue = sharedPreferences.getString(getString(R.string.second_preference_key), getString(R.string.second_preference_default_value));
         secondTextView.setText(getString(R.string.second_preference_label) + " - " + secondPreferenceValue);
+    }
+    private void updateThirdTextView(SharedPreferences sharedPreferences){
+        // TODO (77) Save value of third preference into variable
+        String thirdPreferenceValue = sharedPreferences.getString(getString(R.string.third_preference_key), getString(R.string.third_preference_default_value));
+        thirdTextView.setText(getString(R.string.third_preference_label) + " - " + thirdPreferenceValue);
     }
 
     // TODO (7): Bind /menu/menu_item.xml to MainActivity
@@ -86,6 +96,9 @@ public class MainActivity extends AppCompatActivity implements SharedPreferences
         }else if(key.equals(getString(R.string.second_preference_key))){
             // TODO (47) update view accordingly
             updateSecondTextView(sharedPreferences);
+        }else if(key.equals(getString(R.string.third_preference_key))){
+            // TODO (78) update view accordingly
+            updateThirdTextView(sharedPreferences);
         }
     }
 

@@ -3,6 +3,7 @@ package com.miymayster.simplypreferences;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.preference.CheckBoxPreference;
+import android.support.v7.preference.EditTextPreference;
 import android.support.v7.preference.ListPreference;
 import android.support.v7.preference.Preference;
 import android.support.v7.preference.PreferenceFragmentCompat;
@@ -54,6 +55,13 @@ public class SettingsFragment extends PreferenceFragmentCompat implements Shared
                 // TODO (60): set summary equal to entry with index of the value
                 listPreference.setSummary(listPreference.getEntries()[valueIndex]);
             }
+        }
+        // TODO (79) check that preference is an instance of EditTextPreference class
+        else if(preference instanceof EditTextPreference){
+            // TODO (80) cast preference to EditTextPreference
+            EditTextPreference editTextPreference = (EditTextPreference) preference;
+            // TODO (81) set summary equal to value
+            editTextPreference.setSummary(value);
         }
     }
 
