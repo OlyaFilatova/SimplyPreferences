@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.miymayster.simplypreferences.MainActivity">
+    <!-- TODO (26) Create dummy TextView to show that our sharedPreference works -->
+    <TextView
+        android:id="@+id/first_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:text="@string/first_preference_label" />
+
+</LinearLayout>

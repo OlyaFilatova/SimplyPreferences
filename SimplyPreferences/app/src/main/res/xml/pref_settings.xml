@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- TODO (15) Create file /res/xml/pref_settings.xml -->
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- TODO (21) Create your first preference, I'm using CheckBoxPreference for example -->
+    <!-- ! Store all your strings and values in resources -->
+    <CheckBoxPreference
+        android:defaultValue="@bool/first_preference_default_value"
+        android:key="@string/first_preference_key"
+        android:title="@string/first_preference_label"
+        android:summaryOn="@string/first_preference_on"
+        android:summaryOff="@string/first_preference_off" />
+</PreferenceScreen>

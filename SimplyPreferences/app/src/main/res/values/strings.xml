@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">SimplyPreferences</string>
+    <!-- TODO (5) create string resource for action_settings menu item -->
+    <string name="action_settings">Settings</string>
+    <!-- TODO (16) create key for first preference, make it untranslatable because we need it in code -->
+    <string name="first_preference_key" translatable="false">first_preference_key</string>
+    <!-- TODO (17) create label for first preference -->
+    <string name="first_preference_label">First preference</string>
+    <!-- TODO (18) create on label for first preference -->
+    <string name="first_preference_on">Shown</string>
+    <!-- TODO (19) create off label for first preference -->
+    <string name="first_preference_off">Hidden</string>
+</resources>
