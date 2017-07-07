@@ -5,9 +5,16 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="com.miymayster.simplypreferences.MainActivity">
-    <!-- TODO (26) Create dummy TextView to show that our sharedPreference works -->
+    <!-- TODO (26) Create dummy TextView to show that our first shared preference works -->
     <TextView
         android:id="@+id/first_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:text="@string/first_preference_label" />
+    <!-- TODO (43) Create dummy TextView to show that our second shared preference works -->
+    <TextView
+        android:id="@+id/second_tv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="16dp"

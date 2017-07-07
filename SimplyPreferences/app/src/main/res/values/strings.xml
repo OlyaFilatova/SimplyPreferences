@@ -10,4 +10,23 @@
     <string name="first_preference_on">Shown</string>
     <!-- TODO (19) create off label for first preference -->
     <string name="first_preference_off">Hidden</string>
+
+    <!-- TODO (35) create label for second preference-->
+    <string name="second_preference_label">Second preference</string>
+    <!-- TODO (36) create key for second preference-->
+    <string name="second_preference_key">second_preference</string>
+    <!-- TODO (37) create value for first entry of the second preference-->
+    <string name="second_preference_first_entry_value">first_entry</string>
+    <!-- TODO (38) create label for first entry of the second preference-->
+    <string name="second_preference_first_entry_label">First entry</string>
+    <!-- TODO (37) create value for second entry of the second preference-->
+    <string name="second_preference_second_entry_value">second_entry</string>
+    <!-- TODO (38) create label for second entry of the second preference-->
+    <string name="second_preference_second_entry_label">Second entry</string>
+    <!-- TODO (37) create value for third entry of the second preference-->
+    <string name="second_preference_third_entry_value">third_entry</string>
+    <!-- TODO (38) create label for third entry of the second preference-->
+    <string name="second_preference_third_entry_label">Third entry</string>
+    <!-- TODO (39) create default value for second preference-->
+    <string name="second_preference_default_value">@string/second_preference_first_entry_value</string>
 </resources>

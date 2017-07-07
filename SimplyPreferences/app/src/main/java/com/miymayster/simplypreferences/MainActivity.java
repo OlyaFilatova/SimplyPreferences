@@ -16,32 +16,46 @@ import java.util.prefs.PreferenceChangeListener;
 public class MainActivity extends AppCompatActivity implements SharedPreferences.OnSharedPreferenceChangeListener {
 
     TextView firstTextView;
+    TextView secondTextView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         // TODO (27) Saving reference to our dummy TextView
         firstTextView = (TextView) findViewById(R.id.first_tv);
+        // TODO (44) Saving reference to our dummy TextView
+        secondTextView = (TextView) findViewById(R.id.second_tv);
+
+        setupSharedPreferences();
+    }
+    private void setupSharedPreferences(){
         // TODO (25) Get a reference to the default shared preferences from the PreferenceManager class
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+        // TODO (28) update first TextView accordingly
+        updateFirstTextView(sharedPreferences);
+        // TODO (45) update second TextView accordingly
+        updateSecondTextView(sharedPreferences);
+
+        // TODO (34) register change listener for shared preferences
+        sharedPreferences.registerOnSharedPreferenceChangeListener(this);
+    }
+    private void updateFirstTextView(SharedPreferences sharedPreferences) {
         // TODO (26) Save value of first preference into variable
         boolean firstPreferenceValue = sharedPreferences.getBoolean(
                 getString(R.string.first_preference_key),
                 getResources().getBoolean(R.bool.first_preference_default_value)
         );
-        // TODO (28) update view accordingly
-        updateFirstTextView(firstPreferenceValue);
-
-        // TODO (34) register change listener for shared preferences
-        sharedPreferences.registerOnSharedPreferenceChangeListener(this);
-    }
-    private void updateFirstTextView(boolean value) {
         // TODO (29) If first preference is checked show firstTextView, otherwise hide it
-        if (value) {
+        if (firstPreferenceValue) {
             firstTextView.setVisibility(View.VISIBLE);
         } else {
             firstTextView.setVisibility(View.GONE);
         }
+    }
+    private void updateSecondTextView(SharedPreferences sharedPreferences){
+        // TODO (46) Save value of second preference into variable
+        String secondPreferenceValue = sharedPreferences.getString(getString(R.string.second_preference_key), getString(R.string.second_preference_default_value));
+        secondTextView.setText(getString(R.string.second_preference_label) + " - " + secondPreferenceValue);
     }
 
     // TODO (7): Bind /menu/menu_item.xml to MainActivity
@@ -68,12 +82,10 @@ public class MainActivity extends AppCompatActivity implements SharedPreferences
         // TODO (32) check which preference was changed
         if(key.equals(getString(R.string.first_preference_key))){
             // TODO (33) update view accordingly
-            updateFirstTextView(
-                    sharedPreferences.getBoolean(
-                            key,
-                            getResources().getBoolean(R.bool.first_preference_default_value)
-                    )
-            );
+            updateFirstTextView(sharedPreferences);
+        }else if(key.equals(getString(R.string.second_preference_key))){
+            // TODO (47) update view accordingly
+            updateSecondTextView(sharedPreferences);
         }
     }
 

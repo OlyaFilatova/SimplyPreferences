@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- TODO (15) Create file /res/xml/pref_settings.xml -->
-<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
     <!-- TODO (21) Create your first preference, I'm using CheckBoxPreference for example -->
     <!-- ! Store all your strings and values in resources -->
     <CheckBoxPreference
@@ -9,4 +10,11 @@
         android:title="@string/first_preference_label"
         android:summaryOn="@string/first_preference_on"
         android:summaryOff="@string/first_preference_off" />
+    <!-- TODO (42) Create second preference, ListPreference -->
+    <ListPreference
+        android:defaultValue="@string/second_preference_default_value"
+        android:entries="@array/second_preference_entries"
+        android:entryValues="@array/second_preference_entry_values"
+        android:key="@string/second_preference_key"
+        android:title="@string/second_preference_label" />
 </PreferenceScreen>

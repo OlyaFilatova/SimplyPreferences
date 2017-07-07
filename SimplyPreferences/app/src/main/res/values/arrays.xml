@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- TODO (40) Create entries array for second preference -->
+    <array name="second_preference_entries">
+        <item>@string/second_preference_first_entry_label</item>
+        <item>@string/second_preference_second_entry_label</item>
+        <item>@string/second_preference_third_entry_label</item>
+    </array>
+    <!-- TODO (41) Create entryValues array for second preference -->
+    <array name="second_preference_entry_values">
+        <item>@string/second_preference_first_entry_value</item>
+        <item>@string/second_preference_second_entry_value</item>
+        <item>@string/second_preference_third_entry_value</item>
+    </array>
+</resources>
